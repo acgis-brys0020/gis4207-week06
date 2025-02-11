@@ -25,10 +25,13 @@ def main():
 
 
 def UTM_10_dataprep(in_gdbs_base_folder, out_gdb, out_feature_dataset):
-
     arcpy.env.workspace = in_gdbs_base_folder
     arcpy.ListWorkspaces(in_gdbs_base_folder)
+
     out_folder_path = os.path.dirname(out_gdb)
+    arcpy.management.CreateFileGDB(out_folder_path, os.path.basename(out_gdb))
+
+
 
     Surrey_Working_gdb = arcpy.management.CreateFileGDB(out_folder_path, out_name=out_gdb)
     
