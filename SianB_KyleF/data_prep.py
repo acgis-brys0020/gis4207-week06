@@ -9,8 +9,10 @@ def main():
 
 #usage and script arugments 
     global arcpy, env
-    if len(sys.argv) !=4:
+    if len(sys.argv) != 4:
         print("data_prep.py <in_gdbs_base_folder> <out_gdb> <out_feature_dataset>")
+        sys.exit()
+        
 
 
     import arcpy
